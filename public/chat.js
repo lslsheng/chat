@@ -37,7 +37,7 @@ message.addEventListener('keypress', function(){
 
 // Listen for events
 socket.on('chat', function(data){
-    feedback.innerHTML = '';
+    feedback.innerHTML = '    ';
     blinkTitle("Head's Up","New Message",500, true);
     output.innerHTML += '<p><strong>' + data.id + ': </strong>' + data.message + '</p>';
     chatwindow.scrollTop = chatwindow.scrollHeight;
