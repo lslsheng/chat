@@ -3,8 +3,8 @@ var socket = require('socket.io');
 
 // App setup
 var app = express();
-var server = app.listen(80, function(){
-    console.log('listening for requests on port 80,');
+var server = app.listen(5000, function(){
+    console.log('listening for requests on port 5000,');
 });
 
 var set = new Set();

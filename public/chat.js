@@ -1,5 +1,5 @@
 // Make connection
-var socket = io.connect('http://localhost:4000');
+var socket = io.connect('http://ec2-18-216-125-95.us-east-2.compute.amazonaws.com:5000/');
 
 // Query DOM
 var message = document.getElementById('message'),
