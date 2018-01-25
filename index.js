@@ -7,7 +7,7 @@ var server = app.listen(5000, function(){
     console.log('listening for requests on port 5000,');
 });
 
-var set = new Set();
+var map = new Map();
 
 // Static files
 app.use(express.static('public'));
@@ -20,7 +20,7 @@ io.on('connection', (socket) => {
 
     // Handle chat event
     socket.on('chat', function(data){
-        console.log(data);
+        console.log('chat' + data.toString());
         io.sockets.emit('chat', data);
     });
 
@@ -32,16 +32,16 @@ io.on('connection', (socket) => {
 
     // Handle online event
     socket.on('online', function(data){
-        console.log(data);
-        set.add(data);
-        io.sockets.emit('online', Array.from(set));
+        console.log('online' + data);
+        map.set(socket.id, data);
+        io.sockets.emit('online', Array.from(map.values()));
     });
 
-    // Handle online event
+    // Handle offline event
     socket.on('offline', function(data){
         console.log(data);
-        set.delete(data);
-        io.sockets.emit('online', Array.from(set));
+        map.delete(socket.id);
+        io.sockets.emit('online', Array.from(map.values()));
     });
 
 });

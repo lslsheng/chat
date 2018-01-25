@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My Title</title>
+        <title>Sheng Chat</title>
         <meta charset="utf-8">
-        <title>WebScockets 101</title>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
         <link href="/styles.css" rel="stylesheet" />
     </head>
@@ -11,11 +10,12 @@
         <div id="mario-chat">
             <h2>Sheng Chat</h2>
             <div id="online"></div>
+            <div id="feedback"></div>
             <div id="chat-window">
                 <div id="output"></div>
-                <div id="feedback"></div>
+                <br>
             </div>
-            <input id="handle" type="text" placeholder="Handle" />
+            <input id="name" type="text" placeholder="Name" />
             <input id="message" type="text" placeholder="Message" />
             <button id="send">Send</button>
         </div>

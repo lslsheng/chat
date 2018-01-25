@@ -17,7 +17,7 @@ h2{
 }
 
 #chat-window{
-    height: 400px;
+    height: 450px;
     overflow: auto;
     background: #f9f9f9;
 }
@@ -29,10 +29,9 @@ h2{
     color: #555;
 }
 
-#feedback {
-    color: #aaa;
+#feedback p{
+    color: #abc;
     padding: 14px 0px;
-    height: 20px;
     margin: 0 20px;
 }
 
