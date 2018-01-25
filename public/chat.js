@@ -31,14 +31,14 @@ btn.addEventListener('click', function(){
 
 message.addEventListener('keypress', function(){
     blinkTitleStop()
-    document.title = 'Sheng Chat';
+    document.title = 'Chat';
     socket.emit('typing', id.value);
 })
 
 // Listen for events
 socket.on('chat', function(data){
     feedback.innerHTML = '<p><em>No body is typing a message...</em></p>';
-    blinkTitle("Head's Up","New Message",500, true);
+    blinkTitle("Head's Up","New Message",500);
     output.innerHTML += '<p><strong>' + data.id + ': </strong>' + data.message + '</p>';
     chatwindow.scrollTop = chatwindow.scrollHeight;
 });
